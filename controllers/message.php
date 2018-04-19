@@ -1,8 +1,4 @@
 <?php
-
-include_once 'models/messages.php';
-include_once 'models/system.php';
-
 $id = $_GET['id'];
 $err404 = false;
 
@@ -18,10 +14,8 @@ if($id === null || id==='')
 
 $inner = template('v_message',[
 	'error404' => $error404,
-	'message' => $message
+	'message'  => $message ?? null
 ]);
 
-echo template('v_main',[
-	'title' => 'View message',
-	'content' => $inner
-]);
+$title = 'View message';
+

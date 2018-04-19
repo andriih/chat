@@ -5,4 +5,4 @@
     <textarea name="text"><?php echo $vars['text'];?></textarea><br>
     <input type="submit" value="Відправити">
 </form>
-<?php echo $vars['msg'];?>
+<?php echo $msg;?>
