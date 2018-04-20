@@ -1,21 +1,30 @@
 <?php
-$id = $_GET['id'];
+$id = $_GET['id'] ?? null;
 $err404 = false;
 
 if($id === null || id==='')
 {
     $err404 = true;
 }else{
+    
     $message = messages_one($id);
-    if ($message === false){
+    
+    if ($message === false)
+    {
         $err404 = true;
     }
 }
-
-$inner = template('v_message',[
-	'error404' => $error404,
+if(!$err404)
+{
+    $inner = template('v_message',[
+	'err404' => $err404,
 	'message'  => $message ?? null
-]);
+    ]);
+    
+    $title =  'View message';
+}
 
-$title = 'View message';
+
+
+
 
