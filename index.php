@@ -1,4 +1,4 @@
- <?php
+<?php
 
     include_once 'models/messages.php';
     include_once 'models/system.php';

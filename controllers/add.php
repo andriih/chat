@@ -8,7 +8,8 @@ if(count($_POST) > 0){
             $msg = 'Fill all fields';
         }else{
            $id = messages_add($name, $text);
-           header("Location: index.php?c=message&id=10");
+           //var_dump($id);die;
+           header("Location: index.php?c=message&id=$id");
            exit;
         }
     }else{
