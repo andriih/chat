@@ -9,7 +9,7 @@ if(count($_POST) > 0){
         }else{
            $id = messages_add($name, $text);
            //var_dump($id);die;
-           header("Location: index.php?c=message&id=$id");
+           header("Location:". $ROOT ."message/$id ");
            exit;
         }
     }else{

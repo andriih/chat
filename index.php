@@ -1,16 +1,26 @@
 <?php
 
+    define('ROOT','/hometasks/1.5/chat/');
+
     include_once 'models/messages.php';
     include_once 'models/system.php';
     
    $params = explode('/', $_GET['php1chpu'] );
-   var_dump($params);
+   $end = count($params) - 1;
+   
+   if($params[$end] === '')
+   {
+       unset($params[$end]);
+       $end--;
+   }
+    //debug($_GET);
+    //var_dump($params);
     
     $title = '';
     $inner = '';
     $err404 = false;
        
-    $controller = trim($_GET['c'] ?? 'home') ;
+    $controller = trim($params[0] ?? 'home') ;
     
     if(
             $controller === ''  || 

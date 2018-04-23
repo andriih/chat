@@ -1,5 +1,5 @@
 <?php
-$id = $_GET['id'] ?? null;
+$id = $params[1] ?? null;
 $err404 = false;
 
 if($id === null || id==='')

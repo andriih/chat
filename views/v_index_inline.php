@@ -1,4 +1,4 @@
-<a href="index.php?c=home&view=base">Base layout</a>
+<a href="<?=ROOT?>home&view=base">Base layout</a>
 <div>	
 	<?php foreach($messages as $message) { ?>
     <div>
@@ -9,4 +9,5 @@
     <hr>
 	<?php } ?>
 </div>
-<a href="index.php?c=add">Добавить</a>
+<a href="<?=ROOT?>add">Добавить</a>
+ 

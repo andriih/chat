@@ -8,5 +8,12 @@ function template( $fname, $vars = [] ){
     return ob_get_clean();
 }
 
+function debug ($string)
+{
+    echo "<pre>";
+        print_r($string);
+    echo "</pre>";
+}
+
 
 
